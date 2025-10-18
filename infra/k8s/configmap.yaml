@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: medical-reports-config
+  namespace: medical-reports
+data:
+  DATABASE_URL: "postgresql://medical_user:medical_password@postgres-service:5432/medical_reports"
+  REDIS_URL: "redis://redis-service:6379"
+  ALLOWED_HOSTS: "http://frontend-service:3000,https://yourdomain.com"
+  OCR_LANGUAGE: "eng"
+  AI_MODEL_NAME: "emergentmedical/emergent-medical-ner"
+  MODEL_CACHE_DIR: "/app/models"
+  LOG_LEVEL: "INFO"
+  ENVIRONMENT: "production"
