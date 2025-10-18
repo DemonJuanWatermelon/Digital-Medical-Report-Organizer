@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: medical-reports
+  labels:
+    name: medical-reports
+    app: digital-medical-report-organizer
